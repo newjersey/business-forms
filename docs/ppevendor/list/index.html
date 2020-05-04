@@ -8059,7 +8059,6 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
     }
 
     .wrapper {
@@ -8070,7 +8069,6 @@
 
     main {
       flex: 1;
-      overflow: hidden;
       height: 100%;
       border-top: 1px solid #eee;
     }
@@ -8078,8 +8076,24 @@
     iframe {
       border: 0;
       width: 100%;
-      height: 100%;
-      overflow: hidden;
+    }
+
+    .preamble {
+      padding: 1em 0 2em;
+    }
+
+    .preamble h2 {
+      margin: .5em 0;
+      font-weight: bold;
+      font-size: x-large;
+    }
+
+    .preamble p {
+      margin: .5em 0;
+    }
+
+    strong {
+      font-weight: bold;
     }
 
     /* footer {
@@ -8106,11 +8120,11 @@
                 href="https://nj.gov/" data-ya-track="njgovslashhelp#">nj.gov</a></div>
           </div>
         </div>
-        <div class="Header-bottomRow l-container"><a class="Header-logo" href="https://covid19.nj.gov/" data-ya-track="covidhub"><img
-              class="Header-stateLogo" src="images/nj_media_image.35a37698.svg" alt="">
+        <div class="Header-bottomRow l-container"><a class="Header-logo" href="https://covid19.nj.gov/"
+            data-ya-track="covidhub"><img class="Header-stateLogo" src="images/nj_media_image.35a37698.svg" alt="">
             <div class="Header-stateLogoPhrase">
               <div class="Header-stateLogoPhrase--name">New Jersey</div>
-              <div class="Header-stateLogoPhrase--info Text--large">PPE Vendor Registry</div>
+              <div class="Header-stateLogoPhrase--info Text--large">COVID-19 Information Hub</div>
             </div>
           </a>
           <div class="Header-right Text--small">
@@ -8161,9 +8175,34 @@
     </div>
 
     <main>
-    <iframe class="airtable-embed"
-      src="https://airtable.com/embed/shrOafLO799QI1P91?backgroundColor=red&viewControls=on" frameborder="0"
-      onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+      <div class="preamble l-container">
+        <h2>PPE Supplier Registry Public Listing</h2>
+
+        <p>The information about the vendors and products below was volunteered by the vendors, compiled by the State,
+          and is provided for the express purpose of assisting private businesses and organizations in New Jersey access
+          potential suppliers for PPE and other COVID-related goods and services. Any other use of this information is
+          prohibited.</p>
+
+        <p><strong>All parties are strongly advised to exercise due diligence when selecting vendors and are responsible for
+          ensuring the quality and regulatory compliance of all good/services purchased.</strong></p>
+
+        <p>Please ensure you are following your organization’s policies and practices concerning vendor capability and
+          responsibility to ensure that you are making a safe purchase.</p>
+
+        <p>Information in this table can be easily sorted, searched, and filtered using the buttons at the top of the
+          table. To access these functions, please click on the small grey arrows in the column headers or on the icons
+          above the table.</p>
+
+        <p>Note, this information can be sorted against multiple columns at once. For example, to find all of the
+          entries for large isolation gowns, you would first filter the "Resource Category" column for "Isolation Gowns"
+          then filter the "Size" column for "Large."</p>
+
+        <p>Entries are listed in order of their online registration. The most recent entries are on the bottom of this
+          file.</p>
+      </div>
+      <iframe class="airtable-embed"
+        src="https://airtable.com/embed/shrOafLO799QI1P91?backgroundColor=red&viewControls=on" frameborder="0"
+        onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
     </main>
 
     <!-- <footer>
