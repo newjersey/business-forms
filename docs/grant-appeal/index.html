@@ -74,8 +74,8 @@
         if (!searchString) throw new Error('Missing URL query string.');
         var urlSearchParams = new URLSearchParams(searchString);
         if (!urlSearchParams) throw new Error('Cound not parse query string.');
-        var entryBase64 = urlSearchParams.get('entryBase64');
-        if (!entryBase64) throw new Error('Missing query parameter.');
+        var entryBase64 = urlSearchParams.get('code');
+        if (!entryBase64) throw new Error('Missing code query parameter.');
         var entryJson = atob(entryBase64);
         var entry = JSON.parse(entryJson);
         Cognito.load("forms", { id: "20", entry: entry });
