@@ -61,6 +61,10 @@
       .c-forms-heading .c-forms-form-title,.c-forms-heading h2{padding-left:0!important;padding-top:0!important}
       .c-forms-confirmation-message{padding-left:0!important}
     }
+
+    body.expired .c-button-section {
+      display: none;
+    }
   </style>
 </head>
 
@@ -78,6 +82,7 @@
         if (!entryBase64) throw new Error('Missing code query parameter.');
         var entryJson = atob(entryBase64);
         var entry = JSON.parse(entryJson);
+        if (new Date() > new Date(entry.Expiration + 'T23:59:59')) document.body.classList += ' expired';
         Cognito.load("forms", { id: "20", entry: entry });
       } catch(e) {
         alert('Error loading form: ' + e.message + '\n\nPlease contact covidgrantdeclines@njeda.com');
