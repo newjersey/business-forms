@@ -66,8 +66,23 @@
 
 <body class="c-public-form cognito-background">
   <main id="c-forms-container" class="cognito">
+    <script src="./url-search-params.js"></script>
     <script src="https://services.cognitoforms.com/s/uQNEG-gOCUOOWnAkVY9FZg"></script>
-    <script>Cognito.load("forms", { id: "20" });</script>
+    <script>
+      try {
+        var searchString = document.location.search.substring(1);
+        if (!searchString) throw new Error('Missing URL query string.');
+        var urlSearchParams = new URLSearchParams(searchString);
+        if (!urlSearchParams) throw new Error('Cound not parse query string.');
+        var entryBase64 = urlSearchParams.get('entryBase64');
+        if (!entryBase64) throw new Error('Missing query parameter.');
+        var entryJson = atob(entryBase64);
+        var entry = JSON.parse(entryJson);
+        Cognito.load("forms", { id: "20", entry: entry });
+      } catch(e) {
+        alert('Error loading form: ' + e.message + '\n\nPlease contact covidgrantdeclines@njeda.com');
+      }
+    </script>
   </main>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
