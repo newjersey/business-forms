@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>COVID-19 Grant Declination Appeal</title>
+  <title>COVID-19 Grant Phase 2 Declination Appeal</title>
   <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, minimal-ui" />
-  <meta name="Description" content="Appeal your declined application for a NJEDA Small Business Emergency Assistance Grant." />
+  <meta name="Description" content="Appeal your declined application for a NJEDA Small Business Emergency Assistance Grant (Phase 2)." />
   <link rel="preconnect" href="https://services.cognitoforms.com" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -83,7 +83,7 @@
         var entryJson = atob(entryBase64);
         var entry = JSON.parse(entryJson);
         // if (new Date() > new Date(entry.Expiration + 'T23:59:59')) document.body.classList += ' expired';
-        Cognito.load("forms", { id: "20", entry: entry });
+        Cognito.load("forms", { id: "60", entry: entry });
       } catch(e) {
         alert('Error loading form: ' + e.message + '\n\nPlease contact covidgrantdeclines@njeda.com');
       }
