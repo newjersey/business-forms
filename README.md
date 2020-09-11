@@ -4,8 +4,8 @@
 
 Where `FORM` is the name of a directory with an `index.html` file, which generally contain a simple iframe pass-through to a hosted form.
 
-- [Create a new form page](new/master/_forms?value=---%0Alayout%3A%20cognito%20%23%20or%20jotform%0Atitle%3A%20%0Adescription%3A%20%0Aform%3A%20%0A---%0A)
-- [Create a new redirect page](new/master/_forms?value=---%0Alayout%3A%20redirect%0Alocation%3A%20%0A---%0A)
+- [Create a new form page](https://github.com/newjersey/business-forms/new/master/_forms?value=---%0Alayout%3A%20cognito%20%23%20or%20jotform%0Atitle%3A%20%0Adescription%3A%20%0Aform%3A%20%0A---%0A)
+- [Create a new redirect page](https://github.com/newjersey/business-forms/new/master/_forms?value=---%0Alayout%3A%20redirect%0Alocation%3A%20%0A---%0A)
 
 Web hosting through GitHub Pages with DNS pointed in Azure.
 
