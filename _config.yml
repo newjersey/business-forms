@@ -5,4 +5,5 @@ collections:
   forms:
     output: true
     permalink: /:path/
+exclude: [CNAME, LICENSE, README.md]
 google_analytics: "UA-140253594-5"
