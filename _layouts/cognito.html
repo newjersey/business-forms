@@ -1,18 +1,20 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Application to participate in the Business Consulting for COVID-19 Recovery Program</title>
+  <title>{{page.title}}</title>
   <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, minimal-ui" />
-  <meta name="Description" content="" />
+  <meta name="Description" content="{{page.description}}" />
   <link rel="preconnect" href="https://services.cognitoforms.com" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="alternate" type="application/json+oembed" href="https://services.cognitoforms.com/admin/oembed?url=https%3a%2f%2fwww.cognitoforms.com%2fNJEDA%2fNJEDAGrantApplication" title="Grant Application" />
 
   <style>
     html,body{-webkit-text-size-adjust: 100%;}
@@ -69,7 +71,7 @@
   <main id="c-forms-container" class="cognito">
     <script src="https://services.cognitoforms.com/s/uQNEG-gOCUOOWnAkVY9FZg"></script>
     <script>
-      Cognito.load('forms', { id: '72', isPublicLink: true, entry: '', accessToken: '' });
+      Cognito.load('forms', { id: '{{page.form}}', isPublicLink: true, entry: '', accessToken: '' });
     </script>
   </main>
 
@@ -80,7 +82,7 @@
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
-    gtag('config', 'UA-140253594-5');
+    gtag('config', '{{site.google_analytics}}');
   </script>
 </body>
 

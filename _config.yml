@@ -1,0 +1,9 @@
+collections:
+  forms_legacy:
+    output: true
+    permalink: /:path
+  forms:
+    output: true
+    permalink: /:path/
+exclude: [CNAME, LICENSE, README.md]
+google_analytics: "UA-140253594-5"

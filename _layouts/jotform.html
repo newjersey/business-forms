@@ -1,13 +1,15 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>COVID-19 Essential Retail Business Exemption</title>
+  <title>{{page.title}}</title>
   <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, minimal-ui" />
-  <meta name="Description"
-    content='Complete this form if you believe your retail business should be considered an "Essential Business" and should be exempted from operation restrictions under Executive Order 107.' />
+  <meta name="Description" content="{{page.description}}" />
   <style>
     html,
     body {
@@ -30,11 +32,11 @@
 </head>
 
 <body>
-  <script type="text/javascript" src="https://form.jotform.com/jsform/200804024879051"></script>
+  <script type="text/javascript" src="https://form.jotform.com/jsform/{{page.form}}"></script>
   <noscript>
-    <h1>COVID-19 Essential Retail Business Exemption</h1>
+    <h1>{{page.title}}</h1>
     <p>
-      <a href="https://form.jotform.com/200804024879051">Please click here</a>
+      <a href="https://form.jotform.com/{{page.form}}">Please click here</a>
     </p>
   </noscript>
 
@@ -45,7 +47,7 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-140253594-5');
+    gtag('config', '{{site.google_analytics}}');
   </script>
 </body>
 
