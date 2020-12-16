@@ -238,9 +238,11 @@
           if (!code) throw new Error('Missing code query parameter.');
           var codeParts = code.split('-');
           var entry = {
-            ApplicationNumber: codeParts[0],
-            RestaurantForm: '90-' + codeParts[1],
-            Checksum: codeParts[2],
+            Inputs: {
+              ApplicationNumber: codeParts[0],
+              RestaurantForm: '90-' + codeParts[1],
+              Checksum: codeParts[2]
+            }
           };
 
           Cognito.load("forms", { id: "91", entry: entry });
