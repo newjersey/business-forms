@@ -238,8 +238,8 @@
           if (!code) throw new Error('Missing code query parameter.');
           var codeParts = code.split('-');
           var entry = {
-            ApplicationNumber: codeParts[0],
-            RestaurantSubmissionNumber: codeParts[1],
+            Application: '89-' + codeParts[0],
+            RestaurantSubmission: '90-' + codeParts[1],
             Checksum: codeParts[2],
           };
 
