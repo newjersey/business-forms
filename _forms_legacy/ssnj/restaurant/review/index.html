@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sustain and Serve NJ</title>
+    <meta name="viewport"
+      content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, minimal-ui" />
+    <meta name="Description"
+      content="Restaurant review link, not to be shared." />
+    <link rel="preconnect" href="https://services.cognitoforms.com" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <style>
+      html,
+      body {
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+        overflow-y: auto;
+        background-color: #f3f5f7;
+      }
+
+      #c-forms-container {
+        display: block;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      .cognito .c-forms-form {
+        font-size: inherit !important;
+        margin: 0 auto !important;
+        -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.25);
+      }
+
+      .c-public-form .cognito .c-forms-form-main {
+        padding: 0 20px 8px 20px;
+        min-height: 100px;
+      }
+
+      .c-public-form .cognito .c-forms-heading,
+      .c-public-form .cognito .c-forms-form,
+      .c-public-form .cognito .c-forms-form-main {
+        width: 100%;
+      }
+
+      .c-public-form .cognito .c-forms-heading .c-forms-form-title {
+        padding: 28px 20px 10px 20px;
+      }
+
+      .c-public-form .cognito .c-forms-confirmation-message {
+        padding: 8px 28px;
+      }
+
+      .c-public-form .cognito .c-forms-not-available-message {
+        padding: 28px;
+      }
+
+      .c-public-form .cognito .c-forms-payment-order-summary {
+        padding: 0 20px;
+      }
+
+      .c-public-form .cognito .c-forms-payment {
+        padding: 0 20px;
+      }
+
+      .c-public-form .cognito .c-forms-form-details {
+        padding: 0 20px;
+      }
+
+      .c-public-form .cognito div[class^="c-page-page"] .c-forms-payment {
+        padding: 8px 0 0 0;
+      }
+
+      .c-public-form .cognito .c-button-section {
+        padding: 0 20px 20px 20px;
+      }
+
+      .c-public-form .cognito .c-button-section .c-button-section {
+        padding: 0;
+      }
+
+      .c-public-form .cognito div[class^="c-page-page"] .c-button-section {
+        padding: 8px 0 0 0;
+      }
+
+      .cognito .c-forms-confirmation {
+        padding-bottom: 20px !important;
+      }
+
+      .cognito.c-sml .c-forms-form-main,
+      .cognito.c-sml .c-forms-heading .c-forms-form-title,
+      .cognito.c-sml .c-button-section {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .cognito.c-sml .c-forms-logo {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        margin-bottom: 0
+      }
+
+      .cognito.c-sml .c-forms-confirmation-message {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+      }
+
+      .cognito.c-sml .c-forms-form-details {
+        padding: 0;
+      }
+
+      .cognito.c-sml .c-forms-payment-order-summary {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .cognito.c-sml .c-forms-form-main {
+        margin-bottom: 0 !important;
+      }
+
+
+      .cognito #c-submit-warning {
+        clear: both;
+        padding: 5px 8px;
+        font-size: 90%;
+      }
+
+      .cognito .c-forms-form .c-footer-terms a {
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-size: 11px !important;
+        text-decoration: none;
+        display: block;
+      }
+
+      .cognito .c-forms-form .c-footer-terms a:hover {
+        text-decoration: underline;
+      }
+
+      .c-footer-terms ul {
+        padding: 0;
+        text-align: center;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        margin: 0;
+      }
+
+      .c-footer-terms li {
+        padding: 0 5px;
+        display: inline-block;
+      }
+
+      @media screen and (max-width: 420px) {
+        .c-progress-section {
+          display: none;
+        }
+
+        .c-forms-heading {
+          padding-bottom: 0 !important;
+        }
+      }
+
+      @media print {
+        body {
+          overflow: visible;
+          position: static;
+        }
+
+        #c-forms-container {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+
+        .c-forms-form {
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          margin: 0;
+          overflow: visible !important;
+        }
+
+        .c-forms-form-public-readonly {
+          overflow: visible !important
+        }
+
+        .c-forms-form-main {
+          padding: 0 !important;
+          overflow: visible !important;
+        }
+
+        .c-forms-payment-order-summary {
+          display: inline-block;
+          padding: 0 !important;
+        }
+
+        .c-page {
+          clear: both;
+          overflow: visible !important;
+          display: inline-block;
+        }
+
+        .c-forms-heading .c-forms-form-title,
+        .c-forms-heading h2 {
+          padding-left: 0 !important;
+          padding-top: 0 !important
+        }
+
+        .c-forms-confirmation-message {
+          padding-left: 0 !important
+        }
+      }
+
+      body.expired .c-button-section {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="c-public-form cognito-background">
+    <main id="c-forms-container" class="cognito">
+      <script src="./url-search-params.js"></script>
+      <script src="https://services.cognitoforms.com/s/uQNEG-gOCUOOWnAkVY9FZg"></script>
+      <script>
+        try {
+          var searchString = document.location.search.substring(1);
+          if (!searchString) throw new Error('Missing URL query string.');
+          var urlSearchParams = new URLSearchParams(searchString);
+          if (!urlSearchParams) throw new Error('Cound not parse query string.');
+          var entryBase64 = urlSearchParams.get('code');
+          if (!entryBase64) throw new Error('Missing code query parameter.');
+          var entryJson = atob(entryBase64);
+          var entry = JSON.parse(entryJson);
+
+          Cognito.load("forms", { id: "91", entry: entry });
+        } catch (e) {
+          alert('Error loading form: ' + e.message + '\n\nPlease contact ssnj@njeda.com');
+        }
+      </script>
+    </main>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140253594-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-140253594-5');
+    </script>
+  </body>
+
+</html>
