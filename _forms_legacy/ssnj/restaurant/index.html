@@ -239,6 +239,9 @@
           var entryJson = atob(entryBase64);
           var entry = JSON.parse(entryJson);
 
+          // individual exception
+          if (entry.Inputs.Application.split('-')[0] !== '39') throw new Error('Submission period closed.');
+
           Cognito.load("forms", { id: "90", entry: entry });
         } catch (e) {
           alert('Error loading form: ' + e.message + '\n\nPlease contact ssnj@njeda.com');
