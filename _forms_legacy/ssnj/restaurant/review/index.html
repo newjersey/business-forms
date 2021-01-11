@@ -238,9 +238,6 @@
           if (!code) throw new Error('Missing code query parameter.');
           var codeParts = code.split('-');
 
-          // individual exception
-          if (codeParts[1] !== '39') throw new Error('Submission period closed.');
-
           var entry = {
             Inputs: {
               ApplicationNumber: codeParts[0],
