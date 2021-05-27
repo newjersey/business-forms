@@ -148,10 +148,29 @@
 
 <body>
 	<main>
-		<script src="https://www.cognitoforms.com/f/seamless.js" data-key="uQNEG-gOCUOOWnAkVY9FZg"
-			data-form="119"></script>
+		<script src="./url-search-params.js"></script>
+		<script src="https://www.cognitoforms.com/f/seamless.js" data-key="uQNEG-gOCUOOWnAkVY9FZg" data-form="119"></script>
 		<script>
-			Cognito.prefill({});
+		  try {
+			var searchString = document.location.search.substring(1);
+			if (!searchString) throw new Error("Missing URL query string.");
+			var urlSearchParams = new URLSearchParams(searchString);
+			if (!urlSearchParams)
+			  throw new Error("Cound not parse query string.");
+			var entryBase64 = urlSearchParams.get("code");
+			if (!entryBase64) throw new Error("Missing code query parameter.");
+			var entryJson = atob(entryBase64);
+			var entry = JSON.parse(entryJson);
+			// if (new Date() > new Date(entry.Expiration + 'T23:59:59')) document.body.classList += ' expired';
+			Cognito.prefill(entry);
+		  } catch (e) {
+			alert(
+			  "Error loading form: " +
+			  e.message +
+			  "\n\nPlease contact emerge@njeda.com"
+			);
+			window.location = "https://www.njeda.com/emerge/";
+		  }
 		</script>
 	</main>
 
