@@ -234,7 +234,11 @@
         /* Hack Cognito to disable submitting if already submitted or expiration passed. */
         function initFormHacks($, entry) {
           $(function () {
-            var shouldPreventSubmit = new Date(entry.Expiration) < new Date();
+            var ADJUSTMENT_DAYS = 2;
+
+            var expiration = new Date(entry.Expiration);
+            expiration.setDate(expiration.getDate() + ADJUSTMENT_DAYS);
+            var shouldPreventSubmit = expiration < new Date();
 
             if (shouldPreventSubmit) {
               $("#c-submit-button").prop("disabled", true);
