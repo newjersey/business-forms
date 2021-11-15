@@ -1,166 +1,299 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Henry/Ida Business Assistance Grant Program Application Review</title>
+    <meta
+      name="viewport"
+      content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, minimal-ui"
+    />
+    <meta
+      name="Description"
+      content="Please provide additional information regarding your application for a Henry/Ida Business Assistance Grant Program."
+    />
+    <link rel="preconnect" href="https://services.cognitoforms.com" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Henry-Ida Grant Assistance Application</title>
-	<meta name="viewport"
-		content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, minimal-ui" />
-	<meta name="Description" content="Apply for the Henry-Ida Grant Assistance Program." />
-	<link rel="preconnect" href="https://services.cognitoforms.com" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<style>
-		html,
-		body {
-			-webkit-text-size-adjust: 100%;
-		}
+    <style>
+      html,
+      body {
+        -webkit-text-size-adjust: 100%;
+      }
 
-		body {
-			margin: 0;
-			overflow-y: auto;
-		}
+      body {
+        margin: 0;
+        overflow-y: auto;
+        background-color: #f3f5f7;
+      }
 
-		html:root:root:root:root:root,
-		:root:root:root:root:root body {
-			height: 100%;
-			box-sizing: border-box;
-			margin: 0;
-		}
+      #c-forms-container {
+        display: block;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
 
-		:root:root:root:root:root .cog-form {
-			overflow: auto;
-		}
+      .cognito .c-forms-form {
+        font-size: inherit !important;
+        margin: 0 auto !important;
+        -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.25);
+      }
 
-		:root:root:root:root:root .cog-form--stretch {
-			margin: 0 auto auto;
-		}
+      .c-public-form .cognito .c-forms-form-main {
+        padding: 0 20px 8px 20px;
+        min-height: 100px;
+      }
 
-		:root:root:root:root:root .cog-form--stretch .cog-form__container {
-			margin-top: 0;
-			margin-bottom: 0;
-		}
+      .c-public-form .cognito .c-forms-heading,
+      .c-public-form .cognito .c-forms-form,
+      .c-public-form .cognito .c-forms-form-main {
+        width: 100%;
+      }
 
-		:root:root:root:root.cog-public-form .cog-form__container {
-			margin: var(--page__margins);
-			transition: .2s;
-		}
+      .c-public-form .cognito .c-forms-heading .c-forms-form-title {
+        padding: 28px 20px 10px 20px;
+      }
 
-		:root:root:root:root:root:root .cog-form {
-			width: 100%;
-			min-width: 100%;
-			min-height: 100%;
-			background-attachment: fixed;
-			background-color: var(--page__background-color);
-			background-image: var(--page__background-image);
-			background-size: var(--page__background-size);
-		}
+      .c-public-form .cognito .c-forms-confirmation-message {
+        padding: 8px 28px;
+      }
 
-		@media all and (-ms-high-contrast: none),
-		(-ms-high-contrast: active) {
+      .c-public-form .cognito .c-forms-not-available-message {
+        padding: 28px;
+      }
 
-			/* 
-		We apply page background to the .cog-form element because CSS vars are scoped to each form by the .cog-{formID} class.
-		However, applying the background to this element rather than the body causes the image to jitter when scrolling in IE.
-		Here, we take advantage of the fact that the css-vars-ponyfill doesn't respect this scoping and the fact that we don't
-		need these page-level variables to be scoped. This allows us to apply these to the body and avoid the jitter.
-	*/
-			:root:root:root:root:root body {
-				background-attachment: fixed;
-				background-color: var(--page__background-color);
-				background-image: var(--page__background-image);
-				background-size: var(--page__background-size);
-			}
+      .c-public-form .cognito .c-forms-payment-order-summary {
+        padding: 0 20px;
+      }
 
-			:root:root:root:root:root:root .cog-form {
-				background-attachment: none;
-				background-color: transparent;
-				background-image: none;
-				background-size: none;
-			}
-		}
+      .c-public-form .cognito .c-forms-payment {
+        padding: 0 20px;
+      }
 
+      .c-public-form .cognito .c-forms-form-details {
+        padding: 0 20px;
+      }
 
-		:root:root:root:root:root .cog-form__container {
-			max-width: var(--form__width);
-			transition: margin .2s;
-		}
+      .c-public-form .cognito div[class^="c-page-page"] .c-forms-payment {
+        padding: 8px 0 0 0;
+      }
 
-		/* Top selector is for publish page (doesn't hurt other views because it is on outer container), bottom selector for public-form */
-		:root:root:root:root:root .cog-cognito--styled:not(.cog-form--transparent-background),
-		:root:root:root:root:root .cog-cognito--styled:not(.cog-form--transparent-background) .cog-form__container {
-			box-shadow: 0 0 10px hsla(0, 0%, 0%, .1), 1px 1px 2px hsla(0, 0%, 0%, .1);
-		}
+      .c-public-form .cognito .c-button-section {
+        padding: 0 20px 20px 20px;
+      }
 
-		:root:root:root:root:root .cog-form--maximal-branding {
-			padding-bottom: 50px;
-		}
+      .c-public-form .cognito .c-button-section .c-button-section {
+        padding: 0;
+      }
 
-		/*
-	Public Form Margins
-	Right now, embedded form margins are handled idenpendantly with --form__margins.
+      .c-public-form .cognito div[class^="c-page-page"] .c-button-section {
+        padding: 8px 0 0 0;
+      }
 
-	When we drop support for IE the below can be replaced with:
-	:root .cog-form {
-		--form__margins: 45px;
-	}
- */
+      .cognito .c-forms-confirmation {
+        padding-bottom: 20px !important;
+      }
 
-		/* About 450px and wider */
-		:root:root:root:root:root:root [data-width~='450'] .cog-header.cog-wrapper {
-			padding-top: calc(var(--gutter) * 1.5);
-		}
+      .cognito.c-sml .c-forms-form-main,
+      .cognito.c-sml .c-forms-heading .c-forms-form-title,
+      .cognito.c-sml .c-button-section {
+        padding-left: 0;
+        padding-right: 0;
+      }
 
-		:root:root:root:root:root [data-width~='450'] .cog-wrapper.cog-wrapper,
-		:root:root:root:root:root [data-width~='450'] .cog-page-progress.cog-page-progress ol {
-			padding-right: calc(var(--gutter) * 1.5);
-			padding-left: calc(var(--gutter) * 1.5);
-		}
+      .cognito.c-sml .c-forms-logo {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        margin-bottom: 0;
+      }
 
-		:root:root:root:root:root:root [data-width~='450'] .cog-form__container {
-			padding-bottom: calc(var(--gutter) * 1.5);
-		}
+      .cognito.c-sml .c-forms-confirmation-message {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+      }
 
-		/* About 450px and skinnier */
-		:root:root:root:root:root:root .cog-header.cog-wrapper {
-			padding-top: var(--gutter);
-		}
+      .cognito.c-sml .c-forms-form-details {
+        padding: 0;
+      }
 
-		:root:root:root:root:root .cog-wrapper.cog-wrapper,
-		:root:root:root:root:root .cog-page-progress.cog-page-progress ol {
-			padding-right: var(--gutter);
-			padding-left: var(--gutter);
-		}
+      .cognito.c-sml .c-forms-payment-order-summary {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
 
-		:root:root:root:root:root:root .cog-form__container {
-			padding-bottom: calc(var(--gutter) * 1.25);
-		}
+      .cognito.c-sml .c-forms-form-main {
+        margin-bottom: 0 !important;
+      }
 
-		main,
-		main > * {
-			min-height: 100vh;
-		}
-	</style>
-</head>
+      .cognito #c-submit-warning {
+        clear: both;
+        padding: 5px 8px;
+        font-size: 90%;
+      }
 
-<body>
-	<main>
-		<script src="https://www.cognitoforms.com/f/seamless.js" data-key="uQNEG-gOCUOOWnAkVY9FZg"
-			data-form="163"></script>
-	</main>
+      .cognito .c-forms-form .c-footer-terms a {
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-size: 11px !important;
+        text-decoration: none;
+        display: block;
+      }
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140253594-5"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+      .cognito .c-forms-form .c-footer-terms a:hover {
+        text-decoration: underline;
+      }
 
-		gtag('config', 'UA-140253594-5');
-	</script>
-</body>
+      .c-footer-terms ul {
+        padding: 0;
+        text-align: center;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        margin: 0;
+      }
 
+      .c-footer-terms li {
+        padding: 0 5px;
+        display: inline-block;
+      }
+
+      @media screen and (max-width: 420px) {
+        .c-progress-section {
+          display: none;
+        }
+
+        .c-forms-heading {
+          padding-bottom: 0 !important;
+        }
+      }
+
+      @media print {
+        body {
+          overflow: visible;
+          position: static;
+        }
+
+        #c-forms-container {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+
+        .c-forms-form {
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          margin: 0;
+          overflow: visible !important;
+        }
+
+        .c-forms-form-public-readonly {
+          overflow: visible !important;
+        }
+
+        .c-forms-form-main {
+          padding: 0 !important;
+          overflow: visible !important;
+        }
+
+        .c-forms-payment-order-summary {
+          display: inline-block;
+          padding: 0 !important;
+        }
+
+        .c-page {
+          clear: both;
+          overflow: visible !important;
+          display: inline-block;
+        }
+
+        .c-forms-heading .c-forms-form-title,
+        .c-forms-heading h2 {
+          padding-left: 0 !important;
+          padding-top: 0 !important;
+        }
+
+        .c-forms-confirmation-message {
+          padding-left: 0 !important;
+        }
+      }
+
+      body.expired .c-button-section {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="c-public-form cognito-background">
+    <main id="c-forms-container" class="cognito">
+      <script src="./url-search-params.js"></script>
+      <script src="https://services.cognitoforms.com/s/uQNEG-gOCUOOWnAkVY9FZg"></script>
+      <script>
+        /* Hack Cognito to disable submitting if already submitted or expiration passed. */
+        function initFormHacks($, entry) {
+          $(function () {
+            var shouldPreventSubmit = new Date(entry.Expiration) < new Date();
+
+            if (shouldPreventSubmit) {
+              $("#c-submit-button").prop("disabled", true);
+              $("#c-submit-button").css("visibility", "hidden");
+              $("#c-forms-container").on("click", "button", function (e) {
+                e.stopPropagation();
+                return false;
+              });
+            }
+          });
+        }
+
+        try {
+          var searchString = document.location.search.substring(1);
+          if (!searchString) throw new Error("Missing URL query string.");
+          var urlSearchParams = new URLSearchParams(searchString);
+          if (!urlSearchParams)
+            throw new Error("Cound not parse query string.");
+          var entryBase64 = urlSearchParams.get("code");
+          if (!entryBase64) throw new Error("Missing code query parameter.");
+          var entryJson = atob(entryBase64);
+          var entry = JSON.parse(entryJson);
+          // if (new Date() > new Date(entry.Expiration + 'T23:59:59')) document.body.classList += ' expired';
+          Cognito.load("forms", { id: "163", entry: entry });
+
+          window.findJQueryInterval = window.setInterval(function () {
+            var $ = window.ExoJQuery;
+            console.log("setInterval");
+
+            if ($) {
+              console.log("tick");
+              window.clearInterval(findJQueryInterval);
+              window.findJQueryInterval = null;
+              initFormHacks($, entry);
+            }
+          }, 100);
+        } catch (e) {
+          alert(
+            "Error loading form: " +
+              e.message +
+              "\n\nPlease contact covidgrantdeclines@njeda.com"
+          );
+        }
+      </script>
+    </main>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-140253594-5"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-140253594-5");
+    </script>
+  </body>
 </html>
