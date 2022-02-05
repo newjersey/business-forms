@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Sustain and Serve NJ Phase 3</title>
+  <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, minimal-ui" />
+  <meta name="Description" content="Confirm your information as a restaurant to participate in Sustain and Serve NJ." />
+  <link rel="preconnect" href="https://services.cognitoforms.com" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="alternate" type="application/json+oembed"
+    href="https://www.cognitoforms.com/f/oembed?url=https%3a%2f%2fwww.cognitoforms.com%2fNJEDA%2fSSNJ3RestaurantForm"
+    title="SSNJ-3 Restaurant Form" />
+  <link rel="stylesheet" type="text/css"
+    href="https://www.cognitoforms.com/Content/public-form.css?cachehash=-1503776505" class="cog-style" />
+  <style>
+    @media (max-width: 860px) {
+      :root:root:root:root:root:root .cog-form {
+        display: flex;
+      }
+
+      :root:root:root:root:root:root:root .cog-form__container {
+        width: 100%;
+        max-width: 100%;
+        min-height: 100%;
+        margin: 0;
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://www.cognitoforms.com/Scripts/testing/AutotestDetect.js"></script>
+  <script src="https://www.cognitoforms.com/Scripts/vertical-form-edge-snapping.js?cachehash=-1503776505"></script>
+  <script data-form="178" data-key="uQNEG-gOCUOOWnAkVY9FZg" data-context="public"
+    src="https://www.cognitoforms.com/f/seamless.js"></script>
+
+  <script src="./url-search-params.js"></script>
+  <script>
+    try {
+      var searchString = document.location.search.substring(1);
+      if (!searchString) throw new Error('Missing URL query string.');
+      var urlSearchParams = new URLSearchParams(searchString);
+      if (!urlSearchParams) throw new Error('Cound not parse query string.');
+      var entryBase64 = urlSearchParams.get('code');
+      if (!entryBase64) throw new Error('Missing code query parameter.');
+      var entryJson = atob(entryBase64);
+      var entry = JSON.parse(entryJson);
+
+      Cognito.prefill(entry);
+    } catch (e) {
+      alert('Error loading form: ' + e.message + '\n\nPlease contact ssnj@njeda.com');
+      window.location = 'https://business.nj.gov/covid/eligibility-for-sustain-and-serve';
+    }
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140253594-5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-140253594-5');
+  </script>
+</body>
+
+</html>
